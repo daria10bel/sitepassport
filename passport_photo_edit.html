@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Паспорт с данными</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .passport-container {
+            position: relative;
+            width: 800px; /* Настроить ширину изображения паспорта */
+            height: 1000px; /* Настроить высоту изображения паспорта */
+            background-image: url('background-passport.jpg'); /* Замените на ваше фоновое изображение паспорта */
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .static-field {
+            position: absolute;
+            font-size: 19px; /* Подстройка размера текста */
+            color: black;
+            font-family: Arial, sans-serif;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        .field-photo {
+    position: absolute; /* Для позиционирования в нужном месте */
+    top: 120px; /* Положение окна для фото */
+    left: 30px;
+    width: 120px; /* Ширина области фото */
+    height: 150px; /* Высота области фото */
+    background-color: rgba(200, 200, 200, 0.5); /* Для тестового фона (можно убрать) */
+    border: 1px solid #000; /* Рамка вокруг фото */
+    overflow: hidden; /* Скрываем всё, что выходит за пределы области */
+    box-sizing: border-box; /* Учитываем рамку в размере */
+}
+
+.field-photo img {
+    width: 100%; /* Фото занимает ширину контейнера */
+    height: 100%; /* Фото занимает высоту контейнера */
+    object-fit: cover; /* Масштабируем фото без искажения */
+    display: block; /* Убираем лишние отступы, если есть */
+        }
+        .field-surname {
+            top: 560px; /* Настройка позиции фамилии */
+            left: 450px;
+        }
+        .field-name {
+            top: 650px; /* Настройка позиции имени */
+            left: 450px;
+        }
+        .field-patronymic {
+            top: 690px; /* Настройка позиции отчества */
+            left: 350px;
+        }
+        .field-sex {
+            top: 735px; /* Настройка позиции пола */
+            left: 330px;
+        }
+        .field-dob {
+            top: 735px; /* Настройка позиции даты рождения */
+            left: 470px;
+        }
+        .field-birthplace {
+            top: 780px; /* Настройка позиции места рождения */
+            left: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div class="passport-container">
+        <!-- Фото -->
+        <div class="static-field field-photo"></div>
+	        <!-- Данные -->
+        <div class="static-field field-surname">КЛИМОВА</div>
+        <div class="static-field field-name">Эвелина</div>
+        <div class="static-field field-patronymic">Александровна</div>
+        <div class="static-field field-sex">Ж</div>
+        <div class="static-field field-dob">10.12.2003</div>
+        <div class="static-field field-birthplace">г. Санкт-Петербург</div>
+    </div>
+</body>
+</html>
+
